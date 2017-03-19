@@ -3,7 +3,7 @@ spawn telnet localhost 4444
 expect -re ".*>"
 send "reset halt\r"
 expect -re ".*>"
-send "flash write_image erase main.elf\r"
+send "flash write_image erase $env(PWD)/usart.elf\r"
 expect -re ".*>"
 send "reset\r"
 expect -re ".*>"
